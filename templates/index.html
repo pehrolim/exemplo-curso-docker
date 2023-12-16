@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300" >
+</head>
+<body>
+
+  <div class="main">
+    <div class="content">
+      <div id="message">
+    App: {{.Title}}
+</div>
+<div id="info">
+  <table>
+    <tr>
+      <h3>Hostname: {{.Hostname}}</h3>
+      <h4>Interfaces and IPAddress:</h4>
+      {{ range $key, $value := .Addresses }}
+        <h5>{{ $key }}: {{ $value }}</h5>
+      {{ end }}
+    </tr>
+  </table>
+</div>
+<div id="footer">
+  GNU/Linux (amd64)
+</div>
+    </div>
+  </div>
+
+</body>
+</html>
